@@ -1,0 +1,302 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C0EC9C9916785C9D004CD51E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EC9C9816785C9D004CD51E /* UIKit.framework */; };
+		C0EC9C9B16785C9D004CD51E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EC9C9A16785C9D004CD51E /* Foundation.framework */; };
+		C0EC9C9D16785C9D004CD51E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EC9C9C16785C9D004CD51E /* CoreGraphics.framework */; };
+		C0EC9C9F16785C9D004CD51E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EC9C9E16785C9D004CD51E /* CoreData.framework */; };
+		C0EC9CA516785C9D004CD51E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C0EC9CA316785C9D004CD51E /* InfoPlist.strings */; };
+		C0EC9CA716785C9D004CD51E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C0EC9CA616785C9D004CD51E /* main.m */; };
+		C0EC9CAB16785C9D004CD51E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C0EC9CAA16785C9D004CD51E /* AppDelegate.m */; };
+		C0EC9CAD16785C9D004CD51E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C0EC9CAC16785C9D004CD51E /* Default.png */; };
+		C0EC9CAF16785C9D004CD51E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0EC9CAE16785C9D004CD51E /* Default@2x.png */; };
+		C0EC9CB116785C9D004CD51E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0EC9CB016785C9D004CD51E /* Default-568h@2x.png */; };
+		C0EC9CB416785C9E004CD51E /* Cyprus_Reports.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C0EC9CB216785C9D004CD51E /* Cyprus_Reports.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C0EC9C9416785C9D004CD51E /* Cyprus Reports.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cyprus Reports.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0EC9C9816785C9D004CD51E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C0EC9C9A16785C9D004CD51E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C0EC9C9C16785C9D004CD51E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C0EC9C9E16785C9D004CD51E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C0EC9CA216785C9D004CD51E /* Cyprus Reports-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Cyprus Reports-Info.plist"; sourceTree = "<group>"; };
+		C0EC9CA416785C9D004CD51E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C0EC9CA616785C9D004CD51E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C0EC9CA816785C9D004CD51E /* Cyprus Reports-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cyprus Reports-Prefix.pch"; sourceTree = "<group>"; };
+		C0EC9CA916785C9D004CD51E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C0EC9CAA16785C9D004CD51E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C0EC9CAC16785C9D004CD51E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		C0EC9CAE16785C9D004CD51E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		C0EC9CB016785C9D004CD51E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		C0EC9CB316785C9D004CD51E /* Cyprus_Reports.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cyprus_Reports.xcdatamodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C0EC9C9116785C9D004CD51E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0EC9C9916785C9D004CD51E /* UIKit.framework in Frameworks */,
+				C0EC9C9B16785C9D004CD51E /* Foundation.framework in Frameworks */,
+				C0EC9C9D16785C9D004CD51E /* CoreGraphics.framework in Frameworks */,
+				C0EC9C9F16785C9D004CD51E /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C0EC9C8916785C9D004CD51E = {
+			isa = PBXGroup;
+			children = (
+				C0EC9CA016785C9D004CD51E /* Cyprus Reports */,
+				C0EC9C9716785C9D004CD51E /* Frameworks */,
+				C0EC9C9516785C9D004CD51E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C0EC9C9516785C9D004CD51E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C0EC9C9416785C9D004CD51E /* Cyprus Reports.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C0EC9C9716785C9D004CD51E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0EC9C9816785C9D004CD51E /* UIKit.framework */,
+				C0EC9C9A16785C9D004CD51E /* Foundation.framework */,
+				C0EC9C9C16785C9D004CD51E /* CoreGraphics.framework */,
+				C0EC9C9E16785C9D004CD51E /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C0EC9CA016785C9D004CD51E /* Cyprus Reports */ = {
+			isa = PBXGroup;
+			children = (
+				C0EC9CA916785C9D004CD51E /* AppDelegate.h */,
+				C0EC9CAA16785C9D004CD51E /* AppDelegate.m */,
+				C0EC9CB216785C9D004CD51E /* Cyprus_Reports.xcdatamodeld */,
+				C0EC9CA116785C9D004CD51E /* Supporting Files */,
+			);
+			path = "Cyprus Reports";
+			sourceTree = "<group>";
+		};
+		C0EC9CA116785C9D004CD51E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C0EC9CA216785C9D004CD51E /* Cyprus Reports-Info.plist */,
+				C0EC9CA316785C9D004CD51E /* InfoPlist.strings */,
+				C0EC9CA616785C9D004CD51E /* main.m */,
+				C0EC9CA816785C9D004CD51E /* Cyprus Reports-Prefix.pch */,
+				C0EC9CAC16785C9D004CD51E /* Default.png */,
+				C0EC9CAE16785C9D004CD51E /* Default@2x.png */,
+				C0EC9CB016785C9D004CD51E /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C0EC9C9316785C9D004CD51E /* Cyprus Reports */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0EC9CB716785C9E004CD51E /* Build configuration list for PBXNativeTarget "Cyprus Reports" */;
+			buildPhases = (
+				C0EC9C9016785C9D004CD51E /* Sources */,
+				C0EC9C9116785C9D004CD51E /* Frameworks */,
+				C0EC9C9216785C9D004CD51E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cyprus Reports";
+			productName = "Cyprus Reports";
+			productReference = C0EC9C9416785C9D004CD51E /* Cyprus Reports.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C0EC9C8B16785C9D004CD51E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = necixy;
+			};
+			buildConfigurationList = C0EC9C8E16785C9D004CD51E /* Build configuration list for PBXProject "Cyprus Reports" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C0EC9C8916785C9D004CD51E;
+			productRefGroup = C0EC9C9516785C9D004CD51E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C0EC9C9316785C9D004CD51E /* Cyprus Reports */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C0EC9C9216785C9D004CD51E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0EC9CA516785C9D004CD51E /* InfoPlist.strings in Resources */,
+				C0EC9CAD16785C9D004CD51E /* Default.png in Resources */,
+				C0EC9CAF16785C9D004CD51E /* Default@2x.png in Resources */,
+				C0EC9CB116785C9D004CD51E /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C0EC9C9016785C9D004CD51E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0EC9CA716785C9D004CD51E /* main.m in Sources */,
+				C0EC9CAB16785C9D004CD51E /* AppDelegate.m in Sources */,
+				C0EC9CB416785C9E004CD51E /* Cyprus_Reports.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C0EC9CA316785C9D004CD51E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C0EC9CA416785C9D004CD51E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C0EC9CB516785C9E004CD51E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C0EC9CB616785C9E004CD51E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C0EC9CB816785C9E004CD51E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Cyprus Reports/Cyprus Reports-Prefix.pch";
+				INFOPLIST_FILE = "Cyprus Reports/Cyprus Reports-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C0EC9CB916785C9E004CD51E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Cyprus Reports/Cyprus Reports-Prefix.pch";
+				INFOPLIST_FILE = "Cyprus Reports/Cyprus Reports-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C0EC9C8E16785C9D004CD51E /* Build configuration list for PBXProject "Cyprus Reports" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0EC9CB516785C9E004CD51E /* Debug */,
+				C0EC9CB616785C9E004CD51E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0EC9CB716785C9E004CD51E /* Build configuration list for PBXNativeTarget "Cyprus Reports" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0EC9CB816785C9E004CD51E /* Debug */,
+				C0EC9CB916785C9E004CD51E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C0EC9CB216785C9D004CD51E /* Cyprus_Reports.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C0EC9CB316785C9D004CD51E /* Cyprus_Reports.xcdatamodel */,
+			);
+			currentVersion = C0EC9CB316785C9D004CD51E /* Cyprus_Reports.xcdatamodel */;
+			path = Cyprus_Reports.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C0EC9C8B16785C9D004CD51E /* Project object */;
+}
