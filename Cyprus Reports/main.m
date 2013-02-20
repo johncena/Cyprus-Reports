@@ -2,8 +2,8 @@
 //  main.m
 //  Cyprus Reports
 //
-//  Created by necixy on 12/12/12.
-//  Copyright (c) 2012 necixy. All rights reserved.
+//  Created by Menelaos on 12/12/12.
+//  Copyright (c) 2012 Menelaos. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

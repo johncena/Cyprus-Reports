@@ -2,13 +2,16 @@
 //  AppDelegate.m
 //  Cyprus Reports
 //
-//  Created by necixy on 12/12/12.
-//  Copyright (c) 2012 necixy. All rights reserved.
+//  Created by Menelaos on 12/12/12.
+//  Copyright (c) 2012 Menelaos. All rights reserved.
 //
 
 #import "AppDelegate.h"
 
 @implementation AppDelegate
+
+NSString *const FBSessionStateChangedNotification =
+@"com.Cyprys-Report:FBSessionStateChangedNotification";
 
 - (void)dealloc
 {
@@ -27,6 +30,14 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
+//    FacebookScreen *Screen = [[FacebookScreen alloc]initWithNibName:@"FacebookScreen" bundle:nil];
+    FacebookScreen *Screen = [[FacebookScreen alloc]initWithNibName:@"FacebookScreen" bundle:nil];
+    UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:Screen];
+//    _isLogin = TRUE;
+    navController.navigationItem.backBarButtonItem.tintColor = [UIColor whiteColor];
+    navController.navigationBar.barStyle= UIBarStyleBlack;
+    self.window.rootViewController = navController;
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
@@ -51,17 +62,20 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
+    [FBSession.activeSession handleDidBecomeActive];
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
+    [FBSession.activeSession close];
     // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
 }
 
 - (void)saveContext
 {
+     NSLog(@"saveContext");
     NSError *error = nil;
     NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
     if (managedObjectContext != nil) {
@@ -80,6 +94,7 @@
 // If the context doesn't already exist, it is created and bound to the persistent store coordinator for the application.
 - (NSManagedObjectContext *)managedObjectContext
 {
+    NSLog(@"managedObjectContext");
     if (_managedObjectContext != nil) {
         return _managedObjectContext;
     }
@@ -96,6 +111,7 @@
 // If the model doesn't already exist, it is created from the application's model.
 - (NSManagedObjectModel *)managedObjectModel
 {
+     NSLog(@"managedObjectModel");
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
     }
@@ -108,6 +124,7 @@
 // If the coordinator doesn't already exist, it is created and the application's store added to it.
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator
 {
+     NSLog(@"NSPersistentStoreCoordinator");
     if (_persistentStoreCoordinator != nil) {
         return _persistentStoreCoordinator;
     }
@@ -153,6 +170,86 @@
 - (NSURL *)applicationDocumentsDirectory
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+- (void)sessionStateChanged:(FBSession *)session
+                      state:(FBSessionState) state
+                      error:(NSError *)error
+{
+     NSLog(@"state");
+    switch (state) {
+        case FBSessionStateOpen:
+            if (!error) {
+                // We have a valid session
+                NSLog(@"User session found");
+            }
+            break;
+        case FBSessionStateClosed:
+        case FBSessionStateClosedLoginFailed:
+            [FBSession.activeSession closeAndClearTokenInformation];
+            break;
+        default:
+            break;
+    }
+    
+    [[NSNotificationCenter defaultCenter]
+     postNotificationName:FBSessionStateChangedNotification
+     object:session];
+    
+    if (error) {
+        UIAlertView *alertView = [[UIAlertView alloc]
+                                  initWithTitle:@"Error"
+                                  message:error.localizedDescription
+                                  delegate:nil
+                                  cancelButtonTitle:@"OK"
+                                  otherButtonTitles:nil];
+        [alertView show];
+    }
+}
+
+/*
+ * Opens a Facebook session and optionally shows the login UX.
+ */
+- (BOOL)openSessionWithAllowLoginUI:(BOOL)allowLoginUI {
+    NSLog(@"openSessionWithAllowLoginUI");
+    if (_isLogin) {
+        NSArray *permissions = [[NSArray alloc] initWithObjects:
+                                @"user_location",
+                                @"user_birthday",
+                                @"user_likes",
+                                nil];
+        return [FBSession openActiveSessionWithReadPermissions:permissions
+                                                  allowLoginUI:YES
+                                             completionHandler:^(FBSession *session,
+                                                                 FBSessionState state,
+                                                                 NSError *error) {
+                                                 [self sessionStateChanged:session
+                                                                     state:state
+                                                                     error:error];
+                                             }];
+    }
+    else{
+        return NO;
+    }
+}
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    // attempt to extract a token from the url
+    NSLog(@"Bool");
+    return [FBSession.activeSession handleOpenURL:url];
+}
+//openSessionWithAllowLoginUI
+//2013-02-19 15:35:22.840 Cyprus Reports[4232:c07] Bool
+//2013-02-19 15:35:22.846 Cyprus Reports[4232:c07] state
+//2013-02-19 15:35:22.855 Cyprus Reports[4232:c07] User session found
+
+- (void) closeSession {
+//    [FBSessionStat]
+     NSLog(@"closeSession");
+    [FBSession.activeSession closeAndClearTokenInformation];
+    [FBSession.activeSession close];
+    FBSession.activeSession = nil;
 }
 
 @end
